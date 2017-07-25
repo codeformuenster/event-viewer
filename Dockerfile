@@ -4,6 +4,10 @@ FROM node:8.1-alpine
 
 WORKDIR /app
 
+COPY package.json /app
+
+RUN yarn install
+
 CMD ["yarn", "start"]
 
 EXPOSE 3000

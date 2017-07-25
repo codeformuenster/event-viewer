@@ -1,8 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import EventCard from './EventCard';
+import TitleComponent from './TitleComponent';
+
 import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const App = () => (
+  <div>
+  <MuiThemeProvider>
+    <TitleComponent />
+  </MuiThemeProvider>
+  <MuiThemeProvider>
+    <EventCard />
+  </MuiThemeProvider>
+  </div>
+);
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
