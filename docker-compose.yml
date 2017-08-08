@@ -1,13 +1,13 @@
 version: "2"
 
 services:
-        app:
-                build: .
-                environment:
-                    - MapboxAccessToken=${MapboxAccessToken}
-                ports:
-                        - 3000:3000
-                volumes:
-                        - ./public:/app/public
-                        - ./src:/app/src
-                        - ./.env:/app/.env
+  app:
+    build:       .
+    environment:
+      - MapboxAccessToken=${MapboxAccessToken}
+    ports:
+      - 3000:3000
+    volumes:
+      - ./public:/app/public
+      - ./src:/app/src
+      # - ./.env:/app/.env
