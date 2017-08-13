@@ -1,7 +1,5 @@
 FROM node:8-alpine as build
 
-# RUN yarn global add create-react-app
-
 WORKDIR /usr/src/app
 COPY package.json /usr/src/app
 RUN yarn install

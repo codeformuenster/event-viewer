@@ -10,7 +10,6 @@ services:
     - 3000:3000
     environment:
       - MapboxAccessToken=${MapboxAccessToken}
-    # command: yarn build
     volumes:
       - ./public:/usr/src/app/public
       - ./src:/usr/src/app/src
