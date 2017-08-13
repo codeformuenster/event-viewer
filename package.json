@@ -11,7 +11,7 @@
     "react-tap-event-plugin": "~2.0.1",
     "react-moment": "~0.6.1",
     "moment": "~2.18.1",
-    "flexbox-react": "4.4.0"
+    "flexbox-react": "~4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
