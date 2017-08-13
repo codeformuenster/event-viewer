@@ -1,13 +1,22 @@
 version: "2"
 
 services:
-  app:
-    build:       .
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    command: yarn start
+    ports:
+    - 3000:3000
     environment:
       - MapboxAccessToken=${MapboxAccessToken}
-    ports:
-      - 3000:3000
     volumes:
-      - ./public:/app/public
-      - ./src:/app/src
-      # - ./.env:/app/.env
+      - ./public:/usr/src/app/public
+      - ./src:/usr/src/app/src
+
+  prod:
+    build: .
+    ports:
+    - 80:80
+    environment:
+      - MapboxAccessToken=${MapboxAccessToken}
