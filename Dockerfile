@@ -1,4 +1,4 @@
-FROM node:8.2-alpine
+FROM node:8-alpine as build
 
 # RUN yarn global add create-react-app
 
@@ -15,4 +15,4 @@ CMD ["yarn", "start"]
 
 
 # FROM giantswarm/caddy:0.10.4-slim
-# COPY --from=0 /usr/src/app/build /var/www
+# COPY --from=build /usr/src/app/build /var/www
