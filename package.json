@@ -11,12 +11,16 @@
     "react-tap-event-plugin": "~2.0.1",
     "react-moment": "~0.6.1",
     "moment": "~2.19.3",
-    "flexbox-react": "~4.4.0"
+    "flexbox-react": "~4.4.0",
+    "snyk": "^1.192.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
